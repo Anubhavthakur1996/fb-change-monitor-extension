@@ -1,4 +1,4 @@
-const pageReload = () => {
+const dataComp = () => {
   let itemT;
   let itemC;
   const el = document.getElementsByClassName(
@@ -18,7 +18,6 @@ const pageReload = () => {
   }
 
   if (location.host === "www.facebook.com") {
-    // location.reload();
     if (title !== itemT || cost !== itemC) {
       // Body/data
       let body = {
@@ -66,4 +65,9 @@ const pageReload = () => {
   }
 };
 
+const pageReload = () => {
+  location.reload();
+};
+
+setInterval(dataComp, 1000);
 setInterval(pageReload, 60000);
