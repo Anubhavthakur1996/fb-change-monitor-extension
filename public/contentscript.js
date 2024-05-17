@@ -3,7 +3,8 @@ const pageReload = () => {
     // Reload the page
     location.reload();
 
-    document.ready(() => {
+    // Running the code when page has loaded
+    document.addEventListener("DOMContentLoaded", () => {
       let itemT;
       let itemC;
       const el = document.getElementsByClassName(
